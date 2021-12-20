@@ -1,4 +1,4 @@
-execute positioned ^ ^ ^4 if entity @e[type=minecraft:armor_stand,name=ctg_base,distance=..2] run tag @s add ctg_stop
+execute positioned ^ ^ ^4 if entity @e[type=minecraft:armor_stand,name="ctg_base",distance=..2] run tag @s add ctg_stop
 execute if entity @s[tag=!ctg_stop] align xyz unless block ~ ~-3 ~ minecraft:command_block{CustomName:'{"text":"ctg_trigger"}'} at @s run tp @s ^ ^ ^0.5
 execute align xyz if block ~ ~-3 ~ minecraft:command_block{CustomName:'{"text":"ctg_trigger"}'} run setblock ~ ~-3 ~ minecraft:redstone_block
 execute store result entity @e[type=villager,distance=..1,limit=1] Rotation[0] float 1 run data get entity @s Rotation[0] 1

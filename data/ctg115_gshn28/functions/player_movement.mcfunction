@@ -3,8 +3,8 @@ execute if entity @a[distance=..1,nbt={SelectedItemSlot:0}] run tag @s remove ct
 execute if entity @a[distance=..1,nbt={SelectedItemSlot:2}] run tag @s remove ctg_stop
 tag @s remove ctg_reverse
 execute if entity @a[distance=..1,nbt={SelectedItemSlot:2}] run tag @s add ctg_reverse
-execute if entity @s[tag=!ctg_reverse] positioned ^ ^ ^3.1 if entity @e[type=minecraft:armor_stand,name=ctg_base,distance=..3] run tag @s add ctg_stop
-execute if entity @s[tag=ctg_reverse] positioned ^ ^ ^-3.1 if entity @e[type=minecraft:armor_stand,name=ctg_base,distance=..3] run tag @s add ctg_stop
+execute if entity @s[tag=!ctg_reverse] positioned ^ ^ ^3.1 if entity @e[type=minecraft:armor_stand,name="ctg_base",distance=..3] run tag @s add ctg_stop
+execute if entity @s[tag=ctg_reverse] positioned ^ ^ ^-3.1 if entity @e[type=minecraft:armor_stand,name="ctg_base",distance=..3] run tag @s add ctg_stop
 execute if entity @s[tag=!ctg_stop] run tp @s ^ ^ ^0.5
 execute if entity @s[tag=!ctg_stop,tag=ctg_reverse] run tp @s ^ ^ ^-0.2
 execute if entity @s[tag=!ctg_stop] run function ctg115_gshn28:turn
